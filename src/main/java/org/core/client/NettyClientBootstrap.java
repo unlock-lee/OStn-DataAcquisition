@@ -2,16 +2,11 @@ package org.core.client;
 
 import io.netty.bootstrap.Bootstrap;
 import io.netty.channel.*;
-import io.netty.channel.nio.NioEventLoopGroup;
-import io.netty.channel.socket.SocketChannel;
 import io.netty.channel.socket.nio.NioSocketChannel;
-import io.netty.handler.codec.string.StringDecoder;
-import io.netty.handler.codec.string.StringEncoder;
 
 public class NettyClientBootstrap {
     private int port;
     private String host;
-    private EventLoopGroup loop = new NioEventLoopGroup();
 
     public NettyClientBootstrap(int port, String host) throws Exception {
         this.host = host;
